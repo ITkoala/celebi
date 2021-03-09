@@ -1,4 +1,4 @@
-package com.koala.myboot.controller;
+package com.koala;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,13 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
  * TODO
  *
  * @author lsy
- * @date 2021/3/8 20:10
+ * @date 2021/3/8 20:57
  */
 @RestController
-public class UserController {
-
-    @RequestMapping("/get")
-    public String get(){
+public class BeanController {
+    @RequestMapping("/handle")
+    public String handle(){
         return "celebi";
     }
 }
