@@ -49,6 +49,10 @@ public class MybootApplication {
         System.out.println("容器中tom组件:"+run.containsBean("tom"));
         System.out.println("容器中tom22组件:"+run.containsBean("tom22"));
         System.out.println("容器中User组件:"+run.containsBean("user01"));
+
+        System.out.println("容器中userx组件:"+run.containsBean("userx"));
+        System.out.println("容器中cat组件:"+run.containsBean("cat"));
+
     }
 
 }

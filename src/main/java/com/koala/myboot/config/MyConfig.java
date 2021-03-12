@@ -1,12 +1,15 @@
 package com.koala.myboot.config;
 
 import ch.qos.logback.core.filter.EvaluatorFilter;
+import com.koala.myboot.model.Car;
 import com.koala.myboot.model.Pet;
 import com.koala.myboot.model.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  *  @Configuration告诉SpringBoot这是一个配置类 == 配置文件
@@ -23,6 +26,8 @@ import org.springframework.context.annotation.Import;
 @Configuration(proxyBeanMethods = false)//告诉springboot这是一个配置类 == 配置文件
 //@ConditionalOnBean(name="tom")//放在类上说明当容器中有tom组件时,下面的组件才生效
 @ConditionalOnMissingBean(name="tom")//放在类上说明当容器中有tom组件时,下面的组件才生效
+@ImportResource("classpath:beans.xml")
+@EnableConfigurationProperties(Car.class)
 public class MyConfig {
 
     /*
